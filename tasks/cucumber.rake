@@ -1,4 +1,6 @@
 require 'cucumber/rake/task'
 Cucumber::Rake::Task.new do |t|
-	t.cucumber_opts = %w{--color --format progress --format html --out html/cucumber.html}
+  t.rcov = true
+  t.rcov_opts = %w{--aggregate coverage.data}
+  t.cucumber_opts = %w{}
 end

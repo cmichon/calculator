@@ -1,0 +1,1 @@
+default: --color --format progress --format html --out html/cucumber.html

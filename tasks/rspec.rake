@@ -1,6 +1,8 @@
 require 'spec/rake/spectask'
 Spec::Rake::SpecTask.new do |t|
-  t.verbose = true
-  t.spec_opts = %w{--color --format progress --format html:html/spec.html}
+  t.rcov = true
+  t.rcov_opts = %w{--aggregate coverage.data}
+  t.spec_opts = %w{}
 end
-
+task(:covclean) { rm_f "coverage.data" }
+task :spec => :covclean
