@@ -1,5 +1,3 @@
-require 'cucumber/rake/task'
-
-Cucumber::Rake::Task.new do |t|
-	t.rcov = true
-end
+Dir['tasks/**/*.rake'].each { |rake| load rake }
+task :default => [:spec, :cucumber]
+#task :default => [:cucumber]

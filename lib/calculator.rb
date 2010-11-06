@@ -1,4 +1,7 @@
 class Calculator
+  def awesome?
+    true
+  end
   def push(n)
     @args ||= []
     @args << n
