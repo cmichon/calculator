@@ -1,4 +1,5 @@
 class Calculator
+  attr_reader :screen
   def awesome?
     true
   end
